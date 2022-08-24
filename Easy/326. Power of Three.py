@@ -6,4 +6,5 @@ class Solution:
             return self.isPowerOfThree(n/3)
         elif n == 1:
             return True
+        return False
         
