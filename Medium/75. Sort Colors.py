@@ -3,19 +3,22 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        p0 = 0
-        p2 = len(nums)-1
-        i = 0
-        count = 0
+        p0 = 0 #Indicates the pointer for the next place where the 0 should come
+        p2 = len(nums)-1 #Indicates the pointer for the next place where the 2 should come
+        i = 0 #Pointer used to  traverse each element of the list
+        count = 0 #Counts the number of elements that are put in the right order
         while count < len(nums):
-            if nums[i] == 0:
+            # If the number of pointer i is 0 then swap with the p0 position
+            if nums[i] == 0: 
                 nums[i], nums[p0] = nums[p0], nums[i]
                 i += 1
                 p0 += 1
+            # If the number of pointer i is 1 then we ignore as the 1s will get sorted automatically
             elif nums[i] == 1:
                 i += 1
+            # If the number of pointer i is 2 then swap with the p2 position
             else:
                 nums[i], nums[p2] = nums[p2], nums[i]
-                p2 -= 1
+                p2 -= 1 #We do not increment i as the new swapped elements needs to be checked again
             count += 1
         
