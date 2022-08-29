@@ -7,8 +7,8 @@ class Solution:
         high = n
         while low <= high:
             mid = (low + high) // 2
-			# If n is 1 then we have to return that as the bad version else we check to see 
-			# if the current mid version is a bad version and the version before is not a bad version.
+	    # If n is 1 then we have to return that as the bad version else we check to see 
+	    # if the current mid version is a bad version and the version before is not a bad version.
             if n == 1 or isBadVersion(mid) == True and isBadVersion(mid-1) == False:  
                 return mid
             if isBadVersion(mid) == True: # If true then the first bad version lies on the left of mid
