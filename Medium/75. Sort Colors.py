@@ -22,3 +22,28 @@ class Solution:
                 p2 -= 1 #We do not increment i as the new swapped elements needs to be checked again
             count += 1
         
+### OR
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+
+        c0, c1, c2 = 0, 0, 0
+        for i in nums:
+            if i == 0:
+                c0 += 1
+            elif i == 1:
+                c1 += 1
+            else:
+                c2 += 1
+        for j in range(len(nums)):
+            if c0 != 0:
+                nums[j] = 0
+                c0 -= 1
+            else:
+                if c1 != 0:
+                    nums[j] = 1
+                    c1 -= 1
+                else:
+                    nums[j] = 2
