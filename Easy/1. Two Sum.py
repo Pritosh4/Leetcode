@@ -8,3 +8,5 @@ class Solution:
             else:
                 seen[nums[i]] = i
 
+
+
