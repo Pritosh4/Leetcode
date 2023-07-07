@@ -7,3 +7,4 @@ class Solution:
                 return [seen[rem], i]
             else:
                 seen[nums[i]] = i
+
