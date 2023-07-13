@@ -18,3 +18,4 @@ class Solution:
             count += 1
             ptr = ptr.next
         return ans
+
